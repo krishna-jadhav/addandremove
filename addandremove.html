@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=no, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+    <title>Kj</title>
+   
+</head>
+<body>
+
+<div class="breadcrumb-trail" style="width: 100%; clear: both;">
+    <div class="breadcrumbs">
+        <div class="breadcrumb-cell">
+            <div class="breadcrumb" data-id="memory">memory</div>
+        </div>
+        <div class="breadcrumb-cell">
+            <div class="breadcrumb" data-id="attention">attention</div>
+        </div>
+        <div class="breadcrumb-cell">
+            <div class="breadcrumb" data-id="speed">speed</div>
+        </div>
+        <div class="breadcrumb-cell">
+            <div class="breadcrumb" data-id="flexibility">flexibility</div>
+        </div>
+    </div>
+</div>
+<div style="height: 50px;"></div>
+<div style="width: 100%; clear: both;">
+    <div class="item" data-category="memory">memory</div>
+    <div class="item" data-category="attention">attention</div>
+    <div class="item" data-category="speed">speed</div>
+    <div class="item" data-category="flexibility">flexibility</div>
+</div>
+
+ <script type="text/javascript">
+$(".breadcrumb-cell .breadcrumb").click(function () {
+    var theID = $(this).data("id"),
+        $allItem = $('.item')
+
+        var $currItem = $('.item[data-category=' + theID + ']');
+    $('.item[data-category=' + theID + ']').addClass('active');
+    $allItem.not($currItem).removeClass('active');
+});
+</script>
+ <style type="text/css">
+.breadcrumb-trail .breadcrumbs .breadcrumb-cell {
+    height: 22px;
+    margin: 0 20px;
+    padding: 0;
+    position: relative;
+    float: left;
+    border: 1px solid green;
+    padding: 4px;
+    cursor: pointer;
+}
+.breadcrumb-trail .breadcrumbs .breadcrumb-cell:hover {
+    height: 22px;
+    margin: 0 20px;
+    padding: 0;
+    position: relative;
+    float: left;
+    border: 1px solid green;
+    padding: 4px;
+    cursor: pointer;
+    background: #eee;
+    color: #fff;
+}
+.active {
+    color: red;
+}
+</style>
+</body>
+</html> 
